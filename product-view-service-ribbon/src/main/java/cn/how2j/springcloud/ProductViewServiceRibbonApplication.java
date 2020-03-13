@@ -1,4 +1,4 @@
-package cn.how2j.springcloud.productviewserviceribbon;
+package cn.how2j.springcloud;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutionException;
