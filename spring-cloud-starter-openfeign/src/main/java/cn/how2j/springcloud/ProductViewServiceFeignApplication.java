@@ -27,7 +27,7 @@ public class ProductViewServiceFeignApplication {
 
     public static void main(String[] args) {
         int port = 0;
-        int defaultPort = 8012;
+        int defaultPort = 8018;
         Future<Integer> future = ThreadUtil.execAsync(() ->{
             int p = 0;
             System.out.println("请于5秒钟内输入端口号, 推荐  8012 、 8013  或者  8014，超过5秒将默认使用"+defaultPort);
