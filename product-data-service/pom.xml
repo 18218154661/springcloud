@@ -12,6 +12,7 @@
     <artifactId>product-data-service</artifactId>
 
     <dependencies>
+        <!--注册到eureka服务管理中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -24,6 +25,12 @@
             <groupId>product-data-api</groupId>
             <artifactId>productdataapi</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--使得服务的调用和被调用链路能被发现-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
     </dependencies>
 </project>
