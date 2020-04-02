@@ -7,11 +7,26 @@
         <groupId>cn.how2j.springcloud</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>product.data.service</groupId>
     <artifactId>product-data-service</artifactId>
+    <name>product-data-service</name>
+    <packaging>jar</packaging>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <springfox.version>2.7.0</springfox.version>
+        <freemarker.version>2.3.23</freemarker.version>
+        <springfox.version>2.7.0</springfox.version>
+    </properties>
 
     <dependencies>
+
         <!--注册到eureka服务管理中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -27,10 +42,45 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+
         <!--使得服务的调用和被调用链路能被发现-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+
+
+        <dependency>
+            <groupId>shirotest-demo</groupId>
+            <artifactId>shirotest</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

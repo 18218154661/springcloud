@@ -1,10 +1,11 @@
 package cn.how2j.springcloud.service;
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.how2j.springcloud.pojo.Product;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import cn.how2j.springcloud.pojo.Product;
 @Service
 public class ProductService {
     @Value("${server.port}")

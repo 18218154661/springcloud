@@ -19,7 +19,8 @@ import java.util.List;
 @RefreshScope
 @Controller
 public class ProductController {
-    @Autowired ProductService productService;
+    @Autowired
+    ProductService productService;
 
     @Value("${version}")
     String version;
