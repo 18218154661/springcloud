@@ -34,4 +34,9 @@ public class ProductServiceZuulApplication
     {
 
     }
+
+    public void test2()
+    {
+
+    }
 }
