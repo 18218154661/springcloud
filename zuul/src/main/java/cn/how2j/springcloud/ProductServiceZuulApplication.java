@@ -33,6 +33,6 @@ public class ProductServiceZuulApplication
 
     public void test2()
     {
-        double b = 12345678;
+        double b = 2;
     }
 }
