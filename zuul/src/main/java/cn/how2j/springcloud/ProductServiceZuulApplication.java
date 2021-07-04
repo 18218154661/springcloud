@@ -32,7 +32,7 @@ public class ProductServiceZuulApplication
 
     public void test()
     {
-
+        double a = 0;
     }
 
     public void test2()
